@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Text Language
-  description: Text Language is a simple tool for detecting the language of a text. It returns the language code.
+  description: >-
+    Text Language is a simple tool for detecting the language of a text. It
+    returns the language code.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/textlanguage:
     post:
       summary: Detect Language
-      description: Text Language is a simple tool for detecting the language of a text. It returns the language code.
+      description: Detect the language of a body of text
       operationId: textlanguage
       parameters: []
       responses:
@@ -35,11 +37,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   language: french
                   iso: fr
@@ -48,7 +50,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -59,11 +61,8 @@ paths:
                 text:
                   type: string
                   description: The text to detect the language of
-                  example: Ceci est un exemple de texte. Il peut détecter la langue
               required:
-              - text
-              example:
-                text: Ceci est un exemple de texte. Il peut détecter la langue
+                - text
 components:
   securitySchemes:
     api_key:
@@ -71,4 +70,6 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  text: Ceci est un exemple de texte. Il peut détecter la langue
