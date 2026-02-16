@@ -217,8 +217,9 @@ from apiverve_textlanguage.apiClient import TextlanguageAPIClient
 
 api = TextlanguageAPIClient("[YOUR_API_KEY]")
 
+query = { "text": "Ceci est un exemple de texte. Il peut détecter la langue" }
+
 try:
-    query = { "text": "Ceci est un exemple de texte. Il peut détecter la langue" }
     result = api.execute(query)
     print(result)
 finally:
