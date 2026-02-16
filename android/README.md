@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:textlanguage-api:1.1.13'
+    implementation 'com.github.apiverve:textlanguage-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ TextLanguageAPIClient client = new TextLanguageAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "");
+    parameters.put("text", "Ceci est un exemple de texte. Il peut détecter la langue");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
