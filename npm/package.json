@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/textlanguage",
-  "version": "1.2.0",
-  "description": "Text Language is a simple tool for detecting the language of a text. It returns the language code.",
+  "version": "1.2.2",
+  "description": "Text Language is a language detection API that detects the language of any input string, returning the full language name and its two-letter ISO 639-1 code. Send plain text passages or short snippets to identify incoming multilingual content.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "text language", "text language api", "text language tool", "text language software", "text language service"
+    "language detection api", "language detect api", "text language api", "language api", "detect text language"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/textlanguage-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/textlanguage?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/textlanguage?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
